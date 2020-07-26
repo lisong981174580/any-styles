@@ -5,6 +5,19 @@
   text-overflow: ellipsis;
 }
 
+// 多行省略
+@mixin ellipsis-mult($n: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  word-break: break-all;
+
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;;
+  overflow: hidden;
+}
+
 // 边框公共样式
 @mixin border-common {
   position: absolute;
@@ -73,3 +86,12 @@
     border-right: $width solid $color;
   }
 } 
+
+/* clearfix */
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
