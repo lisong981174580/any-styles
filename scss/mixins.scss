@@ -1,0 +1,75 @@
+// 单行省略
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 边框公共样式
+@mixin border-common {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  content: ' ';
+  width: 200%;
+  height: 200%;
+
+  transition: scale(0.5);
+  transform-origin: left top;
+}
+
+// 设置全部边框
+@mixin border($width: 1px, $color: #eee) {
+  position: relative;
+
+  &:before {
+    @include border-common;
+
+    border: $width solid $color;
+  }
+} 
+
+// 设置上边框
+@mixin border-top($width: 1px, $color: #eee) {
+  position: relative;
+
+  &:before {
+    @include border-common;
+
+    border-top: $width solid $color;
+  }
+} 
+
+// 设置下边框
+@mixin border-bottom($width: 1px, $color: #eee) {
+  position: relative;
+
+  &:before {
+    @include border-common;
+
+    border-bottom: $width solid $color;
+  }
+} 
+
+// 设置左边框
+@mixin border-left($width: 1px, $color: #eee) {
+  position: relative;
+
+  &:before {
+    @include border-common;
+
+    border-left: $width solid $color;
+  }
+} 
+
+// 设置右边框
+@mixin border-right($width: 1px, $color: #eee) {
+  position: relative;
+
+  &:before {
+    @include border-common;
+
+    border-right: $width solid $color;
+  }
+} 

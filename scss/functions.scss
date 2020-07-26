@@ -1,0 +1,9 @@
+// 将 750 视觉稿转为指定比例的尺寸，单位 rpm
+@function rem($size, $scale) {
+  @return px($size, $scale) / 1px * 0.01rem;
+}
+
+// 将 750 视觉稿转为指定比例的尺寸
+@function px($size, $scale) {
+  @return $size / $scale * 1px;
+}

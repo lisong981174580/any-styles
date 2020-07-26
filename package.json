@@ -1,0 +1,19 @@
+{
+  "name": "any-styles",
+  "version": "1.0.0",
+  "description": "css 样式库\"",
+  "main": "./scss/mixins.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisong981174580/any-styles.git"
+  },
+  "author": "李松",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisong981174580/any-styles/issues"
+  },
+  "homepage": "https://github.com/lisong981174580/any-styles#readme"
+}
